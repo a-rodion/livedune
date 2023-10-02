@@ -1,0 +1,9 @@
+version: '3'
+services:
+  tests:
+    build:
+      context: docker/build
+      dockerfile: Dockerfile-tests
+    command: bash -c "cd /app && composer install && composer test"
+    volumes:
+      - .:/app

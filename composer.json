@@ -1,0 +1,28 @@
+{
+  "name": "a-rodion/livedune",
+  "description": "description",
+  "minimum-stability": "stable",
+  "type": "project",
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "rodion",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "php": "~7.4.0",
+    "ext-zip": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~9.6.13"
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
