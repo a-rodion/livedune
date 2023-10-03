@@ -28,6 +28,8 @@ class PriceChangeValidatorTest extends TestCase
             [10, 100, 110, true],
             [10, 200, 180, true],
             [0, 100, 100, true],
+            [100, 0, 100, true],
+            [100, 100, 0, true],
 
             [5, 100, 94.99, false],
             [5, 100, 105.01, false],

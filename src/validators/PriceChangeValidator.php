@@ -31,7 +31,11 @@ class PriceChangeValidator implements Divergention
     public function isValidChange(float $current, float $new): bool
     {
         $diff = abs($new - $current);
-        $this->deviation = ($diff / $current) * 100;
+        if ($current !== 0.00) {
+            $this->deviation = ($diff / $current) * 100;
+        } else {
+            $this->deviation = 100;
+        }
 
         return ($this->deviation <= $this->deviationThreshold);
     }
